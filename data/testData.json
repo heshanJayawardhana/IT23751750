@@ -200,7 +200,7 @@
   {
     "id": "TC_034",
     "name": "Negative - Long Input",
-    "input": "(Paste text over 300 chars)",
+    "input": "Mama ada office giye late una nisa boss tikak upset una, namuth mama explain kara traffic eka hariyata shape na kiyala. Lunch time eke api set ekka kade giya rice ekak kanna, passe meeting ekata prepare una. Evening walata wathura wassa nisa gedara enna amarui, namuth music eka ahagena slow eke drive kara. Gedara awith podi rest ekak gatta passe friends la ekka chat karala nidagatta.",
     "expected": "Performance Lag"
   }
 ]

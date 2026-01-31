@@ -1,5 +1,6 @@
 const PDFDocument = require('pdfkit');
 const fs = require('fs');
+const path = require('path');
 
 /**
  * Generates a PDF report from the processed test data.
@@ -9,6 +10,24 @@ const fs = require('fs');
 function generatePDF(processedData, outputPath) {
     const doc = new PDFDocument({ margin: 30, size: 'A4', layout: 'landscape' }); // Landscape for better table fit
     const writeStream = fs.createWriteStream(outputPath);
+
+    // Register Sinhala Font (Fallback chain: Iskoola Pota -> Abhaya Libre -> Noto Sans)
+    const iskoolaPath = path.join(__dirname, '../fonts/iskpota.ttf');
+    const abhayaPath = path.join(__dirname, '../fonts/AbhayaLibre-Regular.ttf');
+    const notoSansPath = path.join(__dirname, '../fonts/NotoSansSinhala-Regular.ttf');
+
+    if (fs.existsSync(iskoolaPath)) {
+        doc.registerFont('Sinhala', iskoolaPath);
+        console.log('✅ Loaded Iskoola Pota font.');
+    } else if (fs.existsSync(abhayaPath)) {
+        doc.registerFont('Sinhala', abhayaPath);
+        console.log('✅ Loaded Abhaya Libre font.');
+    } else if (fs.existsSync(notoSansPath)) {
+        doc.registerFont('Sinhala', notoSansPath);
+        console.log('⚠️ Using Noto Sans Sinhala (May cause rendering issues).');
+    } else {
+        console.warn('⚠️ No Sinhala font found! Sinhala text will not render correctly.');
+    }
 
     doc.pipe(writeStream);
 
@@ -57,6 +76,8 @@ function generatePDF(processedData, outputPath) {
     };
 
     y = drawHeader(y);
+
+    // Reset to Helvetica for the start of the loop
     doc.font('Helvetica');
 
     processedData.forEach((test) => {
@@ -65,20 +86,32 @@ function generatePDF(processedData, outputPath) {
             doc.addPage({ layout: 'landscape', margin: 30 });
             y = 50;
             y = drawHeader(y);
+            // Reset to Helvetica after new page header
             doc.font('Helvetica');
         }
 
         const statusColor = test.status === 'Pass' ? 'green' : 'red';
 
         doc.fillColor('black');
-        doc.text(test.id || '', colX.id, y, { width: 60, ellipsis: true });
+
+        // English Column: ID
+        doc.font('Helvetica').text(test.id || '', colX.id, y, { width: 60, ellipsis: true });
+
+        // English Column: Name
         doc.text(test.name || '', colX.name, y, { width: 110, ellipsis: true });
+
+        // English/Singlish Column: Input
         doc.text(test.input || '', colX.input, y, { width: 130, ellipsis: true });
-        doc.text(test.expected || '', colX.expected, y, { width: 130, ellipsis: true });
+
+        // Sinhala Column: Expected
+        doc.font('Sinhala').text(test.expected || '', colX.expected, y, { width: 130, ellipsis: true });
+
+        // Sinhala Column: Actual
         doc.text(test.actual || '', colX.actual, y, { width: 130, ellipsis: true });
 
+        // English Column: Status
         doc.fillColor(statusColor);
-        doc.text(test.status || '', colX.status, y);
+        doc.font('Helvetica').text(test.status || '', colX.status, y);
 
         y += itemHeight;
         doc.moveTo(30, y).lineTo(780, y).stroke();

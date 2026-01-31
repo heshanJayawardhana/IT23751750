@@ -118,26 +118,38 @@
                 - img [ref=e126]
               - button "Redo" [ref=e128] [cursor=pointer]:
                 - img [ref=e129]
-          - textbox "Input Your Singlish Text Here." [active] [ref=e132]: api kaeema kanna yanavaa saha passe chithrapatayakuth balanavaa.
-          - generic [ref=e133]:
-            - button "Open File" [ref=e134] [cursor=pointer]:
-              - img [ref=e135]
-            - button "Copy" [ref=e137] [cursor=pointer]:
-              - img [ref=e138]
-            - button "Cut" [ref=e140] [cursor=pointer]:
-              - img [ref=e141]
-            - button "Paste" [ref=e143] [cursor=pointer]:
-              - img [ref=e144]
-            - button "Clear" [ref=e146] [cursor=pointer]:
-              - img [ref=e147]
-        - button "Swap Languages" [ref=e150] [cursor=pointer]:
-          - img [ref=e151]
-        - generic [ref=e153]:
-          - generic [ref=e154]: Sinhala
-          - generic [ref=e156]:
-            - button "Copy" [ref=e157] [cursor=pointer]:
+          - generic [ref=e131]:
+            - textbox "Input Your Singlish Text Here." [active] [ref=e132]: api kaeema kanna yanavaa saha passe chithrapatayakuth balanavaa.
+            - list [ref=e134]:
+              - listitem [ref=e135] [cursor=pointer]: බලනවා
+              - listitem [ref=e136] [cursor=pointer]: බලණවා.
+              - listitem [ref=e137] [cursor=pointer]: බලනවා.
+              - listitem [ref=e138] [cursor=pointer]: බළණවා.
+              - listitem [ref=e139] [cursor=pointer]: බළනවා.
+              - listitem [ref=e140] [cursor=pointer]: ඹලණවා.
+              - listitem [ref=e141] [cursor=pointer]: ඹලනවා.
+              - listitem [ref=e142] [cursor=pointer]: ඹළණවා.
+              - listitem [ref=e143] [cursor=pointer]: ඹළනවා.
+          - generic [ref=e144]:
+            - button "Open File" [ref=e145] [cursor=pointer]:
+              - img [ref=e146]
+            - button "Copy" [ref=e148] [cursor=pointer]:
+              - img [ref=e149]
+            - button "Cut" [ref=e151] [cursor=pointer]:
+              - img [ref=e152]
+            - button "Paste" [ref=e154] [cursor=pointer]:
+              - img [ref=e155]
+            - button "Clear" [ref=e157] [cursor=pointer]:
               - img [ref=e158]
-            - button "Clear" [ref=e160] [cursor=pointer]:
-              - img [ref=e161]
-      - button "Clear" [ref=e164] [cursor=pointer]: 🗑️ Clear
+        - button "Swap Languages" [ref=e161] [cursor=pointer]:
+          - img [ref=e162]
+        - generic [ref=e164]:
+          - generic [ref=e165]: Sinhala
+          - generic [ref=e166]: අපි කෑම කන්න යනවා සහ පස්සෙ චිත්‍රපටයකුත් බලනවා.
+          - generic [ref=e167]:
+            - button "Copy" [ref=e168] [cursor=pointer]:
+              - img [ref=e169]
+            - button "Clear" [ref=e171] [cursor=pointer]:
+              - img [ref=e172]
+      - button "Clear" [ref=e175] [cursor=pointer]: 🗑️ Clear
 ```

@@ -1,0 +1,206 @@
+[
+  {
+    "id": "TC_001",
+    "name": "Simple Sentence",
+    "input": "mama gedhara yanavaa.",
+    "expected": "මම ගෙදර යනවා."
+  },
+  {
+    "id": "TC_002",
+    "name": "Simple Sentence - Request",
+    "input": "mata bath oonee.",
+    "expected": "මට බත් ඕනේ."
+  },
+  {
+    "id": "TC_003",
+    "name": "Compound Sentence",
+    "input": "api kaeema kanna yanavaa saha passe chithrapatayakuth balanavaa.",
+    "expected": "අපි කෑම කන්න යනවා සහ පස්සේ චිත්‍රපටයකුත් බලනවා."
+  },
+  {
+    "id": "TC_004",
+    "name": "Complex Sentence - Condition",
+    "input": "oya enavaanam mama balan innavaa.",
+    "expected": "ඔයා එනවානම් මම බලන් ඉන්නවා."
+  },
+  {
+    "id": "TC_005",
+    "name": "Complex Sentence - Cause",
+    "input": "mama sunaQQgu vunee maarga thadhabadhaya nisaa.",
+    "expected": "මම ප්‍රමාද වුණේ මාර්ග තදබදය නිසා."
+  },
+  {
+    "id": "TC_006",
+    "name": "Interrogative - Question",
+    "input": "meeka hariyata vaeda karanavaadha?",
+    "expected": "මේක හරියට වැඩ කරනවාද?"
+  },
+  {
+    "id": "TC_007",
+    "name": "Imperative - Command",
+    "input": "vahaama enna.",
+    "expected": "වහාම එන්න."
+  },
+  {
+    "id": "TC_008",
+    "name": "Negative Form",
+    "input": "api heta ennee naehae.",
+    "expected": "අපි හෙට එන්නේ නැහැ."
+  },
+  {
+    "id": "TC_009",
+    "name": "Greeting",
+    "input": "suba udhaeesanak!",
+    "expected": "සුභ උදෑසනක්!"
+  },
+  {
+    "id": "TC_010",
+    "name": "Polite Request",
+    "input": "karuNaakaralaa eka poddak balanna.",
+    "expected": "කරුණාකරලා ඒක පොඩ්ඩක් බලන්න."
+  },
+  {
+    "id": "TC_011",
+    "name": "Informal Slang",
+    "input": "ela machan! supiri!!",
+    "expected": "එල මචන්! සුපිරි!!"
+  },
+  {
+    "id": "TC_012",
+    "name": "Day-to-day Expression",
+    "input": "mata nidhimathayi.",
+    "expected": "මට නිදිමතයි."
+  },
+  {
+    "id": "TC_013",
+    "name": "Collocation",
+    "input": "gihin enna",
+    "expected": "ගිහින් එන්න"
+  },
+  {
+    "id": "TC_014",
+    "name": "Emphasis Repetition",
+    "input": "tika tika",
+    "expected": "ටික ටික"
+  },
+  {
+    "id": "TC_015",
+    "name": "Past Tense",
+    "input": "api naetum panthi giyaa.",
+    "expected": "අපි නැටුම් පන්ති ගියා."
+  },
+  {
+    "id": "TC_016",
+    "name": "Future Tense",
+    "input": "mama heta enavaa.",
+    "expected": "මම හෙට එනවා."
+  },
+  {
+    "id": "TC_017",
+    "name": "Plural Pronouns",
+    "input": "eyaalaa enavaa.",
+    "expected": "එයාලා එනවා."
+  },
+  {
+    "id": "TC_018",
+    "name": "Mixed Technical Term",
+    "input": "Zoom link eka WhatsApp karanna.",
+    "expected": "Zoom link එක WhatsApp කරන්න."
+  },
+  {
+    "id": "TC_019",
+    "name": "Place     Names",
+    "input": "api trip     eka Kandy valata yamudha.",
+    "expected": "අපි trip එ    ක Kandy වලට යමුද."
+  },
+  {
+    "id": "TC_020",
+    "name": "Abbreviations",
+    "input": "NIC eka genna.",
+    "expected": "NIC එක ගේන්න."
+  },
+  {
+    "id": "TC_021",
+    "name": "Currency",
+    "input": "Rs. 5000",
+    "expected": "Rs. 5000"
+  },
+  {
+    "id": "TC_022",
+    "name": "Time Format",
+    "input": "7.30 AM",
+    "expected": "7.30 AM"
+  },
+  {
+    "id": "TC_023",
+    "name": "Date Format",
+    "input": "2026-05-21",
+    "expected": "2026-05-21"
+  },
+  {
+    "id": "TC_024",
+    "name": "Multi-line Input",
+    "input": "mama gedhara yanavaa.\noyaa enavadha?",
+    "expected": "මම ගෙදර යනවා.\nඔයා එනවාද?"
+  },
+  {
+    "id": "TC_025",
+    "name": "Negative - Joined Words",
+    "input": "mamagedharayanavaa",
+    "expected": "Incorrect Transliteration"
+  },
+  {
+    "id": "TC_026",
+    "name": "Negative - Mixed Typos",
+    "input": "ammata siri, beheth bnna amthka vna",
+    "expected": "Spelling Errors"
+  },
+  {
+    "id": "TC_027",
+    "name": "Negative - Double Spaces",
+    "input": "mama  gedhara  yanavaa",
+    "expected": "Spacing Issues"
+  },
+  {
+    "id": "TC_028",
+    "name": "Negative - English Only",
+    "input": "This should not convert.",
+    "expected": "This should not convert."
+  },
+  {
+    "id": "TC_029",
+    "name": "Negative - Short Form",
+    "input": "Thx machan",
+    "expected": "Unconverted Text"
+  },
+  {
+    "id": "TC_030",
+    "name": "Negative - Special Chars",
+    "input": "@@##$$",
+    "expected": "No Conversion"
+  },
+  {
+    "id": "TC_031",
+    "name": "Negative - Measurement Units",
+    "input": "100kg pamaNa",
+    "expected": "Incorrect Unit Handling"
+  },
+  {
+    "id": "TC_032",
+    "name": "Negative - Punctuation Stress",
+    "input": "!!! ??? (())",
+    "expected": "Punctuation Drift"
+  },
+  {
+    "id": "TC_033",
+    "name": "Negative - Complex Slang",
+    "input": "appatasiri kiyahankoo",
+    "expected": "Meaning Loss"
+  },
+  {
+    "id": "TC_034",
+    "name": "Negative - Long Input",
+    "input": "(Paste text over 300 chars)",
+    "expected": "Performance Lag"
+  }
+]

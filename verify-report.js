@@ -131,3 +131,8 @@ console.log('Generating PDF report...');
 const pdfStream = generatePDF(processedData, pdfPath); // Pass processed data
 pdfStream.then(() => console.log(`📄 PDF Report saved to: ${pdfPath}`))
     .catch(err => console.error('❌ Error generating PDF:', err));
+
+console.log('Generating Excel report...');
+generateExcel(processedData, excelPath) // Pass processed data
+    .then(() => console.log(`📊 Excel Report saved to: ${excelPath}`))
+    .catch(err => console.error('❌ Error generating Excel:', err));
